@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %}
+
+<title>Inicio</title>
+{% block content %}
+    <h1>¡BIENVENIDO A Vegetabilis Ex Machina!</h1>
+    <button><a href="{% url 'user:index' %}">Usuario</a></button>
+    <button><a href="{% url 'core:login' %}">Ingresar</a></button>
+    <button><a href="{% url 'core:register' %}">Registrarse</a></button>
+    <button><a href="{% url 'core:vegetable_list' %}">Ver lista de vegetales</a></button>
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% block title %}
+    | Registrarse
+{% endblock title %}
+
+{% block cont_title %}
+
+    ¡Regístrate!
+    
+{% endblock cont_title %}
+
+{% block contenido %}
+
+    <form method="post" class="text-center">
+        {% csrf_token %}
+        {{form.as_p}}
+        <div class="d-grid gap-2 d-md-block">
+            <button type="submit" class="btn btn-dark btn-sm">Registrarse</button>
+            <a href="{% url 'core:index' %}">Volver</a>
+        </div>
+    </form>
+{% endblock contenido %}

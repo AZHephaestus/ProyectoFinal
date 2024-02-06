@@ -1,0 +1,22 @@
+{% block title %}
+    | Ingresar
+{% endblock title %}
+
+{% block cont_title %}
+
+    Ingresa tu usuario y contraseña
+    
+{% endblock cont_title %}
+
+{% block contenido %}
+
+    <form method="post" class="text-center">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="hidden" name = "next" value = "{% url 'core:index' %}">
+        <div class="d-grid gap-2 d-md-block">
+            <button type="submit" class="btn btn-dark btn-sm">Iniciar Sesión</button>
+            <a href="{% url 'core:index' %}">Volver</a>
+        </div>
+    </form>
+{% endblock contenido %}

@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+    
+    {% for vegetable in vegetables%}
+
+    <ul>
+        <li>
+            {{vegetable.name}}
+            {{vegetable.price}}
+            {{vegetable.description}}
+        </li>
+    </ul>
+        
+    {% endfor %}
+
+{% endblock content %}
